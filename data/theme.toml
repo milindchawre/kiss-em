@@ -1,3 +1,4 @@
+# Put the URLs for the Icons here
 [social.base]
 codepen = 'https://codepen.io/'
 email =  'mailto:'
@@ -8,5 +9,6 @@ linkedin = 'https://linkedin.com/in/'
 twitter = 'https://twitter.com/'
 youtube = 'https://youtube.com/user/'
 gitlab = 'https://gitlab.com/'
+xing = 'https://www.xing.com/profile/'
 rss = '/'
 about = '/'

@@ -1,5 +1,5 @@
 ---
-date: 2014-03-10
+date: 2019-03-10T19:56:53+02:00
 linktitle: Migrating from Jekyll
 menu:
   main:
@@ -7,6 +7,7 @@ menu:
 prev: /tutorials/mathjax
 title: Migrate to Hugo from Jekyll
 weight: 10
+type: article
 ---
 
 ## Move static content to `static`

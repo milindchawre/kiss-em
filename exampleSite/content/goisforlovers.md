@@ -8,12 +8,13 @@ tags = [
     "themes",
     "development",
 ]
-date = "2014-04-02"
+date = "2014-04-02T15:12:02+02:00"
 categories = [
     "Development",
     "golang",
 ]
 menu = "main"
+type = "article"
 +++
 
 Hugo uses the excellent [go][] [html/template][gohtmltemplate] library for

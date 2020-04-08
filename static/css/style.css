@@ -335,6 +335,7 @@ textarea {
     "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
 }
 
+
 code,
 pre {
   -moz-osx-font-smoothing: auto;
@@ -2494,6 +2495,17 @@ a.box:active {
   vertical-align: top;
 }
 
+.areatitle {
+  color: #b52323;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+
+}
+
+
 .title {
   color: #222324;
 }
@@ -2572,7 +2584,7 @@ a.box:active {
 }
 
 .subtitle+.title {
-  margin-top: -20px;
+  margin-top: -18px;
 }
 
 .subtitle.is-1 {
@@ -5040,7 +5052,6 @@ a.nav-item.is-tab.is-active {
 .nav {
   -ms-flex-align: stretch;
   align-items: stretch;
-  background-color: #fff;
   display: flex;
   position: relative;
   z-index: 2;
@@ -6406,9 +6417,20 @@ a.panel-block:hover {
 }
 
 .section {
-  background-color: #fff;
+  background-color: #F9FAFB;
   padding: 40px 20px;
 }
+
+.section-highlight {
+  background-color: #EFF2F8;
+  padding: 40px 20px;
+  
+
+}
+.section-highlight .title{
+  font-size: 22px;
+}
+
 
 @media screen and (min-width: 980px) {
   .section.is-medium {
@@ -6620,6 +6642,10 @@ img[src$="#r"] {
   margin: 0.7rem;
 }
 
+.related {
+  margin-top: 80px;
+}
+
 .related a:not(.button) {
   border-bottom: none;
 }
@@ -6633,7 +6659,7 @@ img[src$="#r"] {
 }
 
 div.subtitle.tags {
-  margin-bottom: 0px;
+  margin: -4px 0px 0px 0px;
 }
 
 .copy-code-button {

@@ -1,22 +1,20 @@
-name = "Kiss"
+name = "Kiss'Em"
 license = "MIT"
-licenselink = "https://github.com/ribice/kiss/master/LICENSE.md"
-description = "Stupidly simple Hugo blogging theme"
-homepage = "https://www.ribice.ba/hugo-kiss/"
+licenselink = "https://github.com/pavel-pi/kiss-em/master/LICENSE.md"
+description = "Even more simple Hugo blogging theme"
+homepage = "https://github.com/pavel-pi/kiss-em"
 tags = [
   "blog",
   "minimal",
   "minimalist",
-  "responsive"
+  "responsive",
+  "rss"
 ]
 features = [
   "accessibility",
-  "analytics",
-  "comments",
   "cover-image",
   "favicon",
   "multilingual",
-  "opengraph",
   "pagination",
   "shortcodes",
   "single-column",
@@ -26,10 +24,10 @@ features = [
 min_version = 0.28
 
 [author]
-  name = "ribice"
-  homepage = "https://ribice.ba"
+  name = "Pavel Pi"
+  homepage = "https://blog.pavel-pi.de"
 
 [original]
-  name = "hemingway"
-  homepage = "http://tanksuzuki.com"
-  repo = "https://github.com/tanksuzuki/hemingway"
+  name = "kiss"
+  homepage = "https://themes.gohugo.io/theme/kiss/"
+  repo = "https://github.com/ribice/kiss"
