@@ -10,7 +10,14 @@
         {{ partial "tags" .Params.tags }}
         {{ end }}
       </div>
-      <h2 class="subtitle is-6 date">{{ .Date.Format "January 2, 2006" }}</h2>
+      <h2 class="subtitle is-6 date">
+        <!-- Consider german month names -->
+    {{if eq .Site.Language.Lang "de" }}
+        {{ .Date.Day }}. {{ index $.Site.Data.monate (printf "%d" .Date.Month) }} {{ .Date.Year }}, {{ .Date.Format "15:04" }}                 
+    {{ else }}
+        {{ .Date.Format "January 2, 2006 | 15:04" }}
+    {{ end }}
+      </h2>
       <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
       <div class="content">
         {{ .Summary | plainify | safeHTML }}
