@@ -5,58 +5,17 @@
 {{ partial "nav" . }}
 
 
-<!-- Microblog Area -->
-{{ if .Site.Params.microblog.enable }}
-<section class="section-highlight">
-    
-    <div  class ="container">
-        
-        <a href="/micro"><h2 class="areatitle">{{ i18n "microblog_title" }}</h2></a>
-
-        <!-- show "number" of latest "micro" type articles -->
-        {{ range first .Site.Params.microblog.number (where .Site.RegularPages.ByDate.Reverse "Type" "in" "micro") }}
-
-            <!-- Article Tags -->
-            <div class="subtitle tags is-6 is-pulled-right">
-                {{ if .Params.tags }}
-                {{ partial "tags" .Params.tags }}
-                {{ end }}
-                </div>
-
-            <!-- Date above Article Title-->
-            {{if not .Date.IsZero }}
-                <h2 class="subtitle is-6">
-                    <!-- Consider german month names -->
-                    {{if eq .Site.Language.Lang "de" }}
-                        {{ .Date.Day }}. {{ index $.Site.Data.monate (printf "%d" .Date.Month) }} {{ .Date.Year }}, {{ .Date.Format "15:04" }}                 
-                    {{ else }}
-                        {{ .Date.Format "January 2, 2006 | 15:04" }}
-                    {{ end }}
-                </h2>
-            {{ end }}
-
-            <!-- Article Title -->
-            <h1 class="title">
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h1>
-
-        <!-- End loop -->
-        {{ end }}
-    
-    </div>
-</section>
-{{ end }}
-
 <!-- Blog Area -->
 <section class="section">
 
     <div class="container">
 
-        
-        <a href="/blog"><h2 class="areatitle">{{ i18n "blog_title" }}</h2></a>
+        <h2 class="areatitle">{{ i18n "blog_title" }}</h2>
+        <br>
+        <br>
 
         <!-- Loop through all posts filtered by type "article" -->
-        {{ $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Type" "in" "blog") }}
+        {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "in" "blog") }}
         {{ range .Paginator.Pages }}
 
             <article>
@@ -103,8 +62,6 @@
 
     </div>
 </section>
-
-
 
 
 <!-- "Older Posts" / "Newer Posts" Buttons -->

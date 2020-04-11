@@ -38,27 +38,17 @@ To change the behaviour of how related articles are generated, check [official d
 
 ## Creating Articles
 
-There are three types of posts:
-* blog posts (type: `article`)
-* microblog posts (type: `micro`)
-* info pages such as *about* (type: `page`)
 
-Per default, new posts will be of type `article`:
+Create a new blog post:
 
 ```
-$ hugo new my-first-post.md
+$ hugo new blog/my-first-blog-post.md
 ```
 
-In order to create a new post for the microblog you will need to specify the `micro` type:
+Create a new microblog post:
 
 ```
-$ hugo new -k micro my-first-microblog-post.md
-```
-
-In order to create a new info page:
-
-```
-$ hugo new -k page about.md
+$ hugo new micro/my-first-microblog-post.md
 ```
 
 ## License
