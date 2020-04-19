@@ -7,7 +7,6 @@ tags = [
     "markdown",
     "text",
 ]
-type = "micro"
 +++
 
 Lorem est tota propiore conpellat pectoribus de

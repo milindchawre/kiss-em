@@ -13,7 +13,6 @@ categories = [
     "golang",
 ]
 menu = "main"
-type = "article"
 +++
 
 ## Step 1. Install Hugo

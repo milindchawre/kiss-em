@@ -14,7 +14,6 @@ categories = [
     "golang",
 ]
 menu = "main"
-type = "article"
 +++
 
 Hugo uses the excellent [go][] [html/template][gohtmltemplate] library for
