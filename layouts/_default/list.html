@@ -6,7 +6,11 @@
 
 
 <!-- Microblog Area -->
-{{ if .Site.Params.microblog.enable }}
+
+<!-- only show section if at least one microblog post -->
+{{ $microposts := (where .Site.RegularPages "Section" "==" "micro") }}
+{{ if ge (len $microposts) 1 }}
+
 <section class="section-highlight">
     
     <div  class ="container">
@@ -14,7 +18,7 @@
         <a href="/micro"><h2 class="areatitle">{{ i18n "microblog_title" }}</h2></a>
 
         <!-- show "number" of latest "micro" type articles -->
-        {{ range first .Site.Params.microblog.number (where .Site.RegularPages.ByDate.Reverse "Type" "in" "micro") }}
+        {{ range first .Site.Params.microblog.number (where .Site.RegularPages.ByDate.Reverse "Section" "==" "micro") }}
 
             <!-- Article Tags -->
             <div class="subtitle tags is-6 is-pulled-right">
@@ -47,16 +51,21 @@
 </section>
 {{ end }}
 
+
 <!-- Blog Area -->
+
+<!-- only show section if at least one blog post -->
+{{ $blogposts := (where .Site.RegularPages "Section" "==" "blog") }}
+{{ if ge (len $blogposts) 1 }}
+
 <section class="section">
 
     <div class="container">
 
-        
         <a href="/blog"><h2 class="areatitle">{{ i18n "blog_title" }}</h2></a>
 
         <!-- Loop through all posts filtered by type "article" -->
-        {{ $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Type" "in" "blog") }}
+        {{ $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Section" "==" "blog") }}
         {{ range .Paginator.Pages }}
 
             <article>
@@ -103,6 +112,7 @@
 
     </div>
 </section>
+{{ end }}
 
 
 
